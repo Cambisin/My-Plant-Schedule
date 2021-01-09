@@ -4,6 +4,7 @@ import { Calendar } from './components/calendar.js';
 import styled from 'styled-components';
 
 import "./styles.css";
+import { Navbar } from './components/Navbar.js';
 
 
 const Container = styled.div`
@@ -16,8 +17,10 @@ const Container = styled.div`
 function App() {
   return (
     <Container>
+      <Navbar/>
       <h1>Simple Calendar</h1>
       <Calendar />
+      
     </Container>
   );
 }
