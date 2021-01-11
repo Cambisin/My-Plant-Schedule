@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 import { Calendar } from './components/calendar.js';
-import styled from 'styled-components';
 
 import "./styles.css";
 
