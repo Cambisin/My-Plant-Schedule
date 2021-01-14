@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-import { Calendar } from './components/calendar.js';
+import { Login } from './components/login.js';
 
 import "./styles.css";
 
@@ -16,7 +16,7 @@ function App() {
   return (
     <Container>
       <h1>Simple Calendar</h1>
-      <Calendar />
+      <Login />
     </Container>
   );
 }
