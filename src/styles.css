@@ -1,9 +1,14 @@
 body {
     height: 100vh;
-    padding-top: 40px;
+    padding-top: 80px;
+    background-image:url(./components/background.jpg);
+    background-size: cover;
+    font-family:'Fira Mono', monospace;
+
+  
   }
   
   .App {
-    font-family: sans-serif;
+    font-family:'Fira Mono', monospace;
     text-align: center;
   }

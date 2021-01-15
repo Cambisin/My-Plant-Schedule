@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { MenuLink, Nav, Logo, Menu, Hamburger} from "./NavbarStyle";
+import { MenuLink, Nav, Menu, Hamburger} from "./NavbarStyle";
 import PlantLogo from "./PlantLogo.png";
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 const Image = styled.img`
 width: 200px;
@@ -23,7 +24,9 @@ export const Navbar = () => {
         <span />
       </Hamburger>
       <Menu isOpen={isOpen}>
-        <MenuLink href="">ADD NEW PLANT</MenuLink>
+        <MenuLink>
+           <Link to="/AddPlant">ADD NEW PLANT</Link>
+           </MenuLink>
         <MenuLink href="">PLANT LIBRARY</MenuLink>
         <MenuLink href="">CONTACT</MenuLink>
       </Menu>
