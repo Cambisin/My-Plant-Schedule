@@ -13,11 +13,8 @@ import styled from "styled-components";
     border-bottom: 1px solid #c9ada7;
     transition: all 0.2s ease-in;
   }
-  &:visited {
-    text-decoration: none;
-    color: #495867;
-  }
 `;
+
 
  export const Nav = styled.div`
   font-family: 'Fira Mono', monospace;
