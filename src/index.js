@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { render } from 'react-dom';
-//import { Calendar } from './components/calendar.js';
+import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { Calendar } from './components/calendar.js';
+import styled from 'styled-components';
 
 import "./styles.css";
 import { Navbar } from './components/Navbar.js';
+import AddPlant from './components/AddPlant.js';
 
 
 const Container = styled.div`
@@ -15,12 +18,13 @@ const Container = styled.div`
 
 function App() {
   return (
+    <Switch>
     <Container>
       <Navbar/>
-      <Calendar>
-      <h1>Simple Calendar</h1>
-      </Calendar>
-      </Container>
+      <Route exact path="/AddPlant" component={AddPlant} />
+      <Route exact path= "/" component={Calendar} />
+    </Container>
+    </Switch>
   );
 }
 

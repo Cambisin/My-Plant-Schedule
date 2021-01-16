@@ -4,18 +4,18 @@ import styled, { css } from 'styled-components';
 
 
 const Frame = styled.div`
-  width: 400px;
+  width: 500px;
   border: 1px solid lightgrey;
   box-shadow: 2px 2px 2px #eee;
 `;
 
 const Header = styled.div`
   font-size: 18px;
-  font-weight: bold;
+  color: #2B5419;
   padding: 10px 10px 5px 10px;
   display: flex;
   justify-content: space-between;
-  background-color: #f5f6fa;
+  background-color: #c9ada7;
 `;
 
 const Button = styled.div`
@@ -26,11 +26,13 @@ const Body = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  background: whitesmoke;
 `;
 
 const Day = styled.div`
   width: 14.2%;
   height: 40px;
+  color: grey;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,13 +41,13 @@ const Day = styled.div`
   ${props =>
     props.isToday &&
     css`
-      border: 1px solid #eee;
+      border: 0.5px solid #2B5419;
     `}
 
   ${props =>
     props.isSelected &&
     css`
-      background-color: #eee;
+      background-color: #2B5419;
     `}
 `;
 
@@ -82,11 +84,11 @@ export function Calendar() {
   return (
     <Frame>
       <Header>
-        <Button onClick={() => setDate(new Date(year, month - 1, day))}>Prev</Button>
+        <Button onClick={() => setDate(new Date(year, month - 1, day))}>PREV</Button>
         <div>
           {MONTHS[month]} {year}
         </div>
-        <Button onClick={() => setDate(new Date(year, month + 1, day))}>Next</Button>
+        <Button onClick={() => setDate(new Date(year, month + 1, day))}>NEXT</Button>
       </Header>
       <Body>
         {DAYS_OF_THE_WEEK.map(d => (
