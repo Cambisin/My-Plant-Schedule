@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import "./styles.css";
 import { Navbar } from './components/Navbar.js';
 import AddPlant from './components/AddPlant.js';
+import PlantCard from './components/PlantCard.js';
 
 
 const Container = styled.div`
@@ -21,8 +22,9 @@ function App() {
     <Switch>
     <Container>
       <Navbar/>
-      <Route exact path="/AddPlant" component={AddPlant} />
       <Route exact path= "/" component={Calendar} />
+      <Route exact path="/AddPlant" component={AddPlant} />
+      <Route exact path="/PlantCard" component={PlantCard} />
     </Container>
     </Switch>
   );
