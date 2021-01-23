@@ -28,7 +28,7 @@ export const Navbar = () => {
            <Link to="/AddPlant">ADD NEW PLANT</Link>
            </MenuLink>
         <MenuLink>
-           <Link to="/PlantCard">EXPLORE PLANTS</Link>
+           <Link to="/AllPlants">EXPLORE PLANTS</Link>
         </MenuLink>
         <MenuLink href="">CONTACT</MenuLink>
       </Menu>

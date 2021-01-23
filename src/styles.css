@@ -3,6 +3,7 @@ body {
     padding-top: 80px;
     background-image:url(./components/background.jpg);
     background-size: cover;
+    background-attachment: fixed;
     font-family:'Fira Mono', monospace;
 
   
