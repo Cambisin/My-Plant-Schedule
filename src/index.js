@@ -9,6 +9,8 @@ import { Navbar } from './components/Navbar.js';
 import AddPlant from './components/AddPlant.js';
 // import NewPlantCard from './components/newPlantCard.js';
 import Plants from './components/AllPlants';
+import Login from './components/login.js';
+import Register from './components/Register';
 
 
 const Container = styled.div`
@@ -26,6 +28,8 @@ function App() {
       <Route exact path= "/" component={Calendar} />
       <Route exact path="/AddPlant" component={AddPlant} />
       <Route exact path="/AllPlants" component={Plants} />
+      <Route exact path="/Login" component={Login} />
+      <Route exact path="/Register" component={Register} />
     </Container>
     </Switch>
   );
