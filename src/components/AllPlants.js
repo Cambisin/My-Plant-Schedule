@@ -4,10 +4,16 @@ import NewPlantCard from "./newPlantCard";
 import Alert from "./Alert";
 import styled from "styled-components";
 
-export const Heading = styled.h2`
+const Heading = styled.h2`
 color: white;
 background: #C18C5D;
 padding: 10px;
+`
+const Info = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const initialState = {
@@ -36,13 +42,13 @@ function Plants() {
       });
   }, []);
   return (
-    <>
+    <Info>
       <Heading>EXPLORE PLANTS</Heading>
       {plants.map((plant) => (
         <NewPlantCard key={plant.id} {...plant} />
       ))}
       <Alert message={alert.message} success={alert.isSuccess} />
-    </>
+    </Info>
   );
 }
 

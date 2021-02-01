@@ -1,42 +1,32 @@
-import './App.css';
+import React from "react";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { Calendar } from './components/calendar.js';
+import styled from 'styled-components';
+import "./styles.css";
+import { Navbar } from './components/Navbar.js';
+import AddPlant from './components/AddPlant.js';
+import Plants from './components/AllPlants';
+import PlantCareToDo from './components/ToDoList.js';
+
+const Container = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+`
 
 function App() {
   return (
-    <div class="month">
-  <ul>
-    <li class="prev">&#10094;</li>
-    <li class="next">&#10095;</li>
-    <li>August<br><span style="font-size:18px">2017</span></li>
-  </ul>
-</div>
-
-<ul class="weekdays">
-  <li>Mo</li>
-  <li>Tu</li>
-  <li>We</li>
-  <li>Th</li>
-  <li>Fr</li>
-  <li>Sa</li>
-  <li>Su</li>
-</ul>
-
-<ul class="days">
-  <li>1</li>
-  <li>2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>7</li>
-  <li>8</li>
-  <li>9</li>
-  <li><span class="active">10</span></li>
-  <li>11</li>
-  ...etc
-</ul>
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Container>
+        <Navbar />
+      <Route exact path= "/" component={PlantCareToDo} />
+      <Route exact path= "/" component={Calendar} />
+      <Route exact path="/AddPlant" component={AddPlant} />
+      <Route exact path="/AllPlants" component={Plants} />
+      </Container>
+    </Switch>
   );
 }
 
