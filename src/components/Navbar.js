@@ -30,6 +30,9 @@ export const Navbar = () => {
         <MenuLink>
            <Link to="/AllPlants">EXPLORE PLANTS</Link>
         </MenuLink>
+        <MenuLink>
+          <Link to="/login">LOGIN</Link>
+        </MenuLink>
         <MenuLink href="">CONTACT</MenuLink>
       </Menu>
     </Nav>

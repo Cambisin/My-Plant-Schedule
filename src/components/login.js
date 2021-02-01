@@ -1,49 +1,54 @@
-import { getSuggestedQuery } from '@testing-library/react';
-import React from 'react';
-import styled from 'styled-components';
-
-//export const StyledInput = styled.input'
-//border-radius: 8px;
-//border: 1px solid black ;
-//height: 25px;
-//font-size: 16px;
-//;
-
-//export const StyledButton = styled.button'
-//border-radius: 4px;
-//border: 1px solid black;
-//height: 30px;
-//font-size: 16px;
-//background-color: withTheme;
-//color: gray;
-//';
-
-//export const StyledForm = styled.form'
-//display: flex;
-//flex-direction: column;
-//width: 33%;
-//margin: Auto;
-//';
-
-//export const Title = styled.h1"
-//display: flex;
-//flex-direction: column;
-//justify-conent: Center;
-//margin: auto;
-//";
-
-const Login = () => {
-    return( 
-        <Container>
-        <Title>Login</Title>
-        <StyledForm action="submit">
-            <StyledInput type="email" required />
-            <StyledInput type="password"required />
-            <StyledButton type="submit">Login</StyledButton>
-        </StyledForm>
-        <p>Not a member? Register here</p>
-        </Container>
-     );
-}
-
-export default Login;
+import React from "react";
+import axios from "axios";
+import { Label, Form, Button, Select } from "./AddPlantStyle";
+import { Link, useHistory} from "react-router-dom";
+  
+  const Login = ({ handleChange, value, setUser }) => {
+    const history = useHistory();    
+    
+        const handleSubmit = (e) => {
+          e.preventDefault();
+    
+          axios
+          .post("http://127.0.0.1:5001/login", {
+          email: value.email,
+          password: value.password,
+        })
+        .then((res) => {
+            setUser(res);
+            history.push("/home")
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+    };
+    
+  
+    return (
+      <div className="email">
+        <Form onSubmit={handleSubmit}>
+          <Label htmlFor="name">
+            EMAIL
+            <input
+              type="email" 
+              required placeholder="email ..." onChange={handleChange}
+              name="email" />
+          </Label>
+          <Label htmlFor="name">
+            PASSWORD
+            <input
+             type="password"
+             required placeholder="password ..." onChange={handleChange}
+             name="password" 
+            />
+          </Label>
+          
+        
+          <Button type="submit">L O G I N</Button>
+        </Form>
+        <Link to="/register">Not a member? Register here.</Link>
+      </div>
+    );
+  };
+  
+  export default Login;
