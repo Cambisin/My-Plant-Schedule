@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { Label, Form, Button, Select } from "./AddPlantStyle";
+import { Label, Form, Button } from "./AddPlantStyle";
 import { Link, useHistory} from "react-router-dom";
   
   const Login = ({ handleChange, value, setUser }) => {

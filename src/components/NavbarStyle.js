@@ -4,15 +4,20 @@ import styled from "styled-components";
   padding: 0.75rem 1.5rem;
   cursor: pointer;
   text-align: center;
-  text-decoration: none;
+  text-decoration: none !important;
   color: #495867;
   transition: all 0.1s ease-in;
   font-size: 1.2rem;
+  };
+  &:visited, &:link, &:active {
+    text-decoration: none !important;
+    color: inherit;
+  }
   &:hover {
+    text-decoration: none !important;
     color: #2B5419;
     border-bottom: 1px solid #c9ada7;
     transition: all 0.2s ease-in;
-  }
 `;
 
 

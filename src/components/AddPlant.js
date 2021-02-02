@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Label, Form, Button, Select } from "./AddPlantStyle";
 
+
 const initialState = {
     fields: {
       name: "",
@@ -15,11 +16,13 @@ const initialState = {
     const [fields, setFields] = useState(initialState.fields);
   
     const handleAddPlant = async (event) => {
+      alert("Your plant has been added!")
       event.preventDefault();
       const url = "https://plant-library-api.herokuapp.com/plant";
       await axios
         .post(url, fields)
         .then((res) => console.log(res))
+        
         .catch((err) => console.log(err));
     };
   

@@ -25,15 +25,17 @@ export const Navbar = () => {
       </Hamburger>
       <Menu isOpen={isOpen}>
         <MenuLink>
-           <Link to="/AddPlant">ADD NEW PLANT</Link>
+          <Link to="/login"><MenuLink>LOGIN</MenuLink></Link>
+        </MenuLink>
+        <MenuLink>
+           <Link to="/AddPlant"><MenuLink>ADD NEW PLANT</MenuLink></Link>
            </MenuLink>
         <MenuLink>
-           <Link to="/AllPlants">EXPLORE PLANTS</Link>
+           <Link to="/AllPlants"><MenuLink>EXPLORE PLANTS</MenuLink></Link>
         </MenuLink>
         <MenuLink>
-          <Link to="/login">LOGIN</Link>
+        <Link to="/MoreInfo"><MenuLink>MORE INFO</MenuLink></Link>
         </MenuLink>
-        <MenuLink href="">CONTACT</MenuLink>
       </Menu>
     </Nav>
   );

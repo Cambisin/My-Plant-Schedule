@@ -7,6 +7,9 @@ import { Navbar } from './components/Navbar.js';
 import AddPlant from './components/AddPlant.js';
 import Plants from './components/AllPlants';
 import PlantCareToDo from './components/ToDoList.js';
+import Login from './components/login.js';
+import Register from './components/Register';
+import MoreInformation from './components/MoreInfo';
 
 const Container = styled.div`
   height: 100%;
@@ -25,6 +28,9 @@ function App() {
       <Route exact path= "/" component={Calendar} />
       <Route exact path="/AddPlant" component={AddPlant} />
       <Route exact path="/AllPlants" component={Plants} />
+      <Route exact path="/Login" component={Login} />
+      <Route exact path="/Register" component={Register} />
+      <Route exact path="/MoreInfo" component={MoreInformation} />
       </Container>
     </Switch>
   );
