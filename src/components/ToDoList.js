@@ -3,7 +3,7 @@ import { Frame, Wrapper, CardHeader, Delete, ListItem, AddButton, Form, Input } 
 
 class PlantCareToDo extends React.Component  {
     state = {
-      tasks: ['Example Task']
+      tasks: ['Remove button >']
     };
   
     handleSubmit = task => {
