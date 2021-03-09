@@ -25,9 +25,6 @@ export const Navbar = () => {
       </Hamburger>
       <Menu isOpen={isOpen}>
         <MenuLink>
-          <Link to="/login"><MenuLink>LOGIN</MenuLink></Link>
-        </MenuLink>
-        <MenuLink>
            <Link to="/AddPlant"><MenuLink>ADD NEW PLANT</MenuLink></Link>
            </MenuLink>
         <MenuLink>
